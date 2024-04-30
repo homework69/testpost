@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial';
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+button{
+    cursor: pointer;
+}
+.container {
+    max-width: 1350px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// post
+.posts {
+    margin-top: 50px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px black;
+        display: grid;
+        gap: 10px;
+        &-text{
+            word-break: break-all;
+        }
+    }
+}
+
+
+// post
+
+// modal
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__block{
+        background: rgb(178, 239, 236);
+        border-radius: 30px;
+        max-width: 312px;
+        width: 100%;
+        padding: 20px;
+        &-title{
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        &-inputs{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            & label{
+                position: relative;
+            }
+            & span{
+                position: absolute;
+                top: -10px;
+                left: 16px;
+            }
+            & input,
+            & textarea{
+                outline: none;
+                border: none;
+                resize: none;
+                width: 100%;
+                padding: 15px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+.add{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+// modal
+
+.postdescr{
+    max-width: 312px;
+    width: 100%;
+    margin: 50px auto;
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    
+}
